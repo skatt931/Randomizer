@@ -1,0 +1,93 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #ababab;
+}
+
+
+.intro {
+	margin: 0;
+	margin-top: -20px;
+	padding-top: 20px;
+	height: 120px;
+	background: url(../images/background.png);
+	color: #ffeb00;
+}
+
+.big-h1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 330px;
+	font-size: 50px;
+	font-weight: 900;
+}
+#body-id {
+	background-color: #e0dcdc;
+}
+
+#window {
+	width: 500px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.center {
+	display: inline;
+	margin: 0 auto;
+}
+
+#window-screen {
+	width: auto;
+	margin: 20px 0;
+	padding-top: 60px;
+	padding-left: 20px;
+	background-color: white;
+	height: 300px;
+	border-radius: 20px;
+	font-size: 100px;
+	text-align: center;
+	overflow: auto;
+}
+
+#settings {
+	padding-left: 150px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+
+.inputs {
+	width: 40px;
+	margin: 0px 0;
+	text-align: center;
+	margin-left: 0px;
+}
+
+
+#random-btn {
+	display: block;
+	margin: 0 0 30px 280px;
+}
+
+footer {
+	display: block;
+	height: 50px;
+	background: url(../images/background.png);
+	margin-top: 200px;
+	color: yellow;
+}
+
+
+
+#inputs-id {
+	width: 1000px;
+	padding-left: 100px;
+}

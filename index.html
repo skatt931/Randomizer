@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Randomizer</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libraries/bootstrap.min.css">
+	<link rel="stylesheet" href="libraries/bootstrap-theme.min.css">
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body id="body-id">
+
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="intro">
+				<h1 class="big-h1">Randomizer</h1>
+			</div>
+		</div>
+		<!--Вікно результатів-->
+		<div id="window">
+			<h3 class="center">Випадкове число :</h3>
+			<div id="window-screen"><span id="screen-text"></span> </div>
+		</div>
+		<!--Кнопки налаштувань-->
+		<div id="settings">
+			<button id="random-btn" class="btn btn-primary btn-lg">Згенерувати</button>
+			<div id="inputs-id">
+				<div class="col-xs-3">
+					<label for="summary">Введіть кількість чисел:</label>
+					<input type="text" name="" id="summary" class="inputs form-control" value="1">
+				</div>
+
+				<div class="col-xs-2">
+					<label for="max">max:</label>
+					<input type="text" name="" id="max" class="inputs form-control" value="99">
+				</div>
+				<div class="col-xs-2">
+					<label for="min">min:</label>
+					<input type="text" name="" id="min" class="inputs form-control" value="1">
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer>
+		Ihor Kurnytskyi
+	</footer>
+</body>
+
+</html>
