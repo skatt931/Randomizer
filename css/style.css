@@ -77,17 +77,20 @@ body {
 	margin: 0 0 30px 280px;
 }
 
+#inputs-id {
+	width: 1000px;
+	padding-left: 100px;
+}
+
 footer {
 	display: block;
 	height: 50px;
 	background: url(../images/background.png);
 	margin-top: 200px;
-	color: yellow;
+	color: #9b9b99;
+	padding: 10px 0 0 20px;
 }
 
-
-
-#inputs-id {
-	width: 1000px;
-	padding-left: 100px;
+footer h4 span {
+	font-size: 15px;
 }
