@@ -5,10 +5,10 @@ $(document).ready(function () {
 
 	$("#max").focus(maxFocus);
 	$("#max").blur(maxBlur);
-	
+
 	$("#min").focus(minFocus);
 	$("#min").blur(minBlur);
-	
+
 	$("#random-city-btn").click(getRandomCity);
 
 	//Функція визначення рандомного числа
@@ -40,11 +40,11 @@ $(document).ready(function () {
 			});
 		} else if (sum >= 11 && sum < 16) {
 			$("#window-screen").css({
-				paddingTop: "0px",
-				fontSize: "50px",
-				textAlign: "left"
+				paddingTop: "0px"
+				, fontSize: "50px"
+				, textAlign: "left"
 			});
-		} else if (sum >= 16){
+		} else if (sum >= 16) {
 			$("#window-screen").css({
 				fontSize: "40px"
 				, paddingTop: "0px"
@@ -85,40 +85,48 @@ $(document).ready(function () {
 			$("#min").val("1");
 		}
 	};
-	
+
 	//Random city
-	var APP = [{			   
-		city: ["Львів","Дніпро","Луцьк","Тернопіль","Хмельницьк","Чернівці","Ужгород","Одеса","Київ","Херсон","Івано-Франківськ","Миколаїв","Чернігів","Черкаси","Полтава","Харків"],
-		country: "Ukraine"
-	},{
-		city: ["Варшава","Гдиня","Гданськ","Вроцлав"],
-		country: "Poland"
-	},{
-		city:["Берлін","Бремен","Ганновер","Нюрнберг","Мюнхен","Штудгард","Дрезден"],
-		country: "Germany"
-	},{
-		city:["Прага","Брно","Острава","Злін"],
-		country: "Chech Republick"
-	},{
-		city:["Рим","Неаполь","Катанія","Флоренція","Палермо","Венеція","Верона","Мілан","Піза"],
-		country: "Italy"
-	},{
-		city:["Мадрид","Севілья","Сарагоса","Валенсія","Барселона","Більбао","Мурсія","Пальма"],
-		country: "Spain"
-	},{
-		city:["Париж","Ніцца","Ліон","Марсель","Тулуза","Бордо","Канни"],
-		country: "France"
+	var APP = [{
+		city: ["Варшава", "Гдиня", "Гданськ", "Вроцлав"]
+		, country: "Poland"
+	}, {
+		city: ["Берлін", "Бремен", "Ганновер", "Нюрнберг", "Мюнхен", "Штудгард", "Дрезден"]
+		, country: "Germany"
+	}, {
+		city: ["Прага", "Брно", "Острава", "Злін"]
+		, country: "Chech Republick"
+	}, {
+		city: ["Рим", "Неаполь", "Катанія", "Флоренція", "Палермо", "Венеція", "Верона", "Мілан", "Піза"]
+		, country: "Italy"
+	}, {
+		city: ["Мадрид", "Севілья", "Сарагоса", "Валенсія", "Барселона", "Більбао", "Мурсія", "Пальма"]
+		, country: "Spain"
+	}, {
+		city: ["Париж", "Ніцца", "Ліон", "Марсель", "Тулуза", "Бордо", "Канни"]
+		, country: "France"
 	}];
-	
-	
+
+	var APPUKR = [{
+		city: ["Львів", "Дніпро", "Луцьк", "Тернопіль", "Хмельницький", "Чернівці", "Ужгород", "Одеса", "Київ", "Херсон", "Івано-Франківськ", "Миколаїв", "Чернігів", "Черкаси", "Полтава", "Харків","Маріуполь","Кіровоград","Рівне","Суми","Житомир","Вінниця","Кам'янець-Подільський","Хотин","Чорноморськ","Мукачево","Біла Церква","Прип'ять","Кривий Ріг","Запоріжжя","Трускавець","Шацьк","Затока","Скадовськ","Берегове"]
+		, country: "Ukraine"
+	}];
+
+
 	function getRandomCity() {
 		var randAll = Math.floor(Math.random() * APP.length);
 		var randCity = Math.floor(Math.random() * APP[randAll].city.length);
-		var randCountry = Math.floor(Math.random() * APP[randAll].country.length);
 		
-		$("#screen-city-text").fadeOut(0).fadeIn(300).text(APP[randAll].city[randCity]);
-		$("#paragraph-text").fadeOut(0).fadeIn(300).text(APP[randAll].country);
+		var randCityUkr = Math.floor(Math.random() * APPUKR[0].city.length);
+
+		if (document.getElementById("allCountry").checked) {
+			$("#screen-city-text").fadeOut(0).fadeIn(300).text(APP[randAll].city[randCity]);
+			$("#paragraph-text").fadeOut(0).fadeIn(300).text(APP[randAll].country);
+		} else if (document.getElementById("ukraine").checked) {
+			$("#screen-city-text").fadeOut(0).fadeIn(300).text(APPUKR[0].city[randCityUkr]);
+			$("#paragraph-text").fadeOut(0).fadeIn(300).text(APPUKR[0].country)
+		}
 	}
-		getRandomCity();
-	
+	getRandomCity();
+
 });
