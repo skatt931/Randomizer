@@ -15,18 +15,35 @@ body {
 	margin: 0;
 	margin-top: -20px;
 	padding-top: 20px;
-	height: 120px;
+	height: 135px;
 	background: url(../images/background.png);
 	color: #ffeb00;
 }
 
 .big-h1 {
 	display: block;
-	margin-left: auto;
+	margin-left: 50px;
 	margin-right: auto;
 	width: 330px;
 	font-size: 50px;
 	font-weight: 900;
+}
+#navigation {
+	margin-left: 40px;
+}
+#navigation li {
+	list-style-type: none;
+	display: inline;
+	border-left: 1px solid white;
+	margin-left: 15px;
+	padding-left: 5px;
+}
+#navigation a {
+	text-decoration: none;
+	color: yellow;
+}
+#navigation a:hover {
+	color:#fda703;
 }
 #body-id {
 	background-color: #e0dcdc;
@@ -56,6 +73,24 @@ body {
 	overflow: auto;
 }
 
+#window-city-screen {
+	width: auto;
+	margin: 20px 0;
+	padding-left: 20px;
+	height: 300px;
+	border-radius: 20px;
+	font-size: 100px;
+	text-align: center;
+}
+
+#window-city-screen #screen-city-text {
+	font-size: 60px;
+}
+
+#screen-city-text+p {
+	font-size: 40px;
+}
+
 #settings {
 	padding-left: 150px;
 	width: 1000px;
@@ -73,6 +108,11 @@ body {
 
 
 #random-btn {
+	display: block;
+	margin: 0 0 30px 280px;
+}
+
+#random-city-btn {
 	display: block;
 	margin: 0 0 30px 280px;
 }
