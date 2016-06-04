@@ -134,3 +134,13 @@ footer {
 footer h4 span {
 	font-size: 15px;
 }
+#selectCountry {
+	margin: 50px 0 0 220px;
+}
+
+#selectCountry input {
+	margin-left: 5px;
+}
+#selectCountry label {
+	margin-left: 10px;
+}
