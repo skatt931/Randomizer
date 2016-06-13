@@ -257,13 +257,27 @@ $(document).ready(function () {
 	}];
 
 
-
+console.log(appPhrase[25].phrase[0].length);
 
 
 	function getRandomPhrase() {
 		var randAll = Math.floor(Math.random() * appPhrase.length);
 		var randPhrase = Math.floor(Math.random() * appPhrase[randAll].phrase.length);
-
+		
+		console.log(appPhrase[randAll].phrase[randPhrase].length);
+		
+		if(appPhrase[randAll].phrase[randPhrase].length >=  60) {
+			$("#screen-phrase-text").css({
+				fontSize: "20px",
+				fontWeight: "bold"
+			});
+		} else if (appPhrase[randAll].phrase[randPhrase].length <=  60) {
+			$("#screen-phrase-text").css({
+				fontSize: "28px",
+				fontWeight: "normal"
+			});
+		}
+		
 		$("#screen-phrase-text").fadeOut(0).fadeIn(300).text(appPhrase[randAll].phrase[randPhrase]);
 		$("#person-text").fadeOut(0).fadeIn(300).text(appPhrase[randAll].person);
 	};
@@ -275,4 +289,5 @@ $(document).ready(function () {
 	if (document.getElementById("allCountry")) {
 		getRandomCity();
 	}
+	
 });
